@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  laravel:
+    image: eboraas/laravel
+    container_name: app
+    ports:
+      - "80:80"
+    volumes:
+      - ./site:/var/www/laravel
+    links:
+      - mysql
+  mysql:
+    image: mysql
+    container_name: laravel.mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+    volumes:
+      # The database files will be saved on the
+      # host machine for persistency:
+      - ./laravel.mysql:/var/lib/mysql

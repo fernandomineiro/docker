@@ -1,3 +1,8 @@
 make up
 make login container=app
 mv www/laravel/* . && mv www/laravel/.* .
+
+sudo chmod 777 site -R (permissão)
+
+make login container=laravel.mysql(banco)
+mysql -u root -p1234

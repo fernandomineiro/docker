@@ -1,6 +1,6 @@
 make up
 make login container=app
-mv www/laravel/* . && mv www/laravel/.* .
+cp /var/www/laravel/.* /temporary
 
 sudo chmod 777 site -R (permissão)
 
